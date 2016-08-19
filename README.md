@@ -7,14 +7,37 @@
 ----
 [演示Demo apk下载][3]  
 
+> 1. 需要说明的是，本库没有对RecyclerView做大的修改，只是ItemView的封装。看起来是对RecyclerView的修改，其实仅仅是为RecyclerView添加了使用的方法API而已。
+2. 本库已经更新了两个版本了，也将会一直维护下去，根据小伙伴的要求，以后也会添加一些其它功能。
+
+SwipeRecyclerView将完美解决这些问题：
+> 0. 以下功能全部支持：竖向ListView、横向ListView、Grid、StaggeredGrid四种形式。
+1. RecyclerView侧滑菜单（左右两侧都可以添加）。
+2. RecyclerView长按拖拽Item。
+3. RecyclerView侧滑删除item。
+4. 指定RecyclerView的某一个Item不能滑动删除或长按拖拽。
+5. 根据Item的ViewType来决定显示的菜单。
+6. 用SwipeMenuLayout在任何地方都可以实现你自己的侧滑菜单。
+7. 使用SwipeRefreshLayout下拉刷新。
+8. 解决和ViewPager嵌套使用的滑动冲突。。
+
 # 引用方法  
 * Eclipse 请自行[下载源码][4]。  
 * AndroidStudio使用Gradle构建添加依赖（推荐）  
 ```groovy
-compile 'com.yanzhenjie:recyclerview-swipe:1.0.0'
+compile 'com.yanzhenjie:recyclerview-swipe:1.0.1'
 ```
 
-本库引用的RecyclerView版本如下：
+Or Maven:
+```xml
+<dependency>
+  <groupId>com.yanzhenjie</groupId>
+  <artifactId>recyclerview-swipe</artifactId>
+  <version>1.0.1</version>
+</dependency>
+```
+
+我在开发SwipeRecyclerView时引用的RecyclerView版本如下：
 ```groovy
 compile 'com.android.support:recyclerview-v7:23.4.0'
 ```
@@ -29,7 +52,10 @@ gif有一些失真，且网页加载速度慢，可以[下载demo的apk][3]看�
 <image src="./image/3.gif" width="300px"/> <image src="./image/4.gif" width="300px"/>  
 
 ## 拖拽、侧滑删除  
-<image src="./image/5.gif" width="300px"/> <image src="./image/6.gif" width="300px"/>  
+<image src="./image/5.gif" width="300px"/> <image src="./image/6.gif" width="300px"/> 
+
+## 用户自定义菜单 下拉刷新、上拉加载更多
+<image src="./image/7.gif" width="300px"/> <image src="./image/8.gif" width="300px"/> 
 
 # 使用介绍
 这里列出关键实现，具体请参考demo，或者加最上面的交流群一起讨论。
